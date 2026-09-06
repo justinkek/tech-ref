@@ -1,0 +1,16 @@
+{
+	"name": "tech-ref",
+	"interface": {
+		"displayName": "tech-ref",
+		"shortDescription": "How a piece of work is built, written down before it is."
+	},
+	"plugins": [
+		{
+			"name": "tech-ref",
+			"source": {
+				"source": "local",
+				"path": "./"
+			}
+		}
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"name": "tech-ref",
+	"version": "0.1.0",
+	"description": "How a piece of work is built, written down before it is.",
+	"license": "MIT",
+	"pi": {
+		"extensions": [
+			"./harness-adapters/pi/src/index.ts"
+		]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"hooks": {
+		"SessionStart": [
+			{
+				"hooks": [
+					{
+						"type": "command",
+						"command": "${CLAUDE_PLUGIN_ROOT}/hooks/load-agents-md.sh"
+					}
+				]
+			}
+		],
+		"PreToolUse": [
+			{
+				"matcher": "Edit|Write",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "${CLAUDE_PLUGIN_ROOT}/hooks/guard-tech-steps.sh"
+					}
+				]
+			},
+			{
+				"matcher": "mcp__plugin_Notion_notion__notion-update-page",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "${CLAUDE_PLUGIN_ROOT}/hooks/guard-tech-steps.sh"
+					}
+				]
+			}
+		]
+	}
+}
