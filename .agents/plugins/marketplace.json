@@ -1,0 +1,16 @@
+{
+	"name": "tech-ref",
+	"interface": {
+		"displayName": "tech-ref",
+		"shortDescription": "tech steps for humans"
+	},
+	"plugins": [
+		{
+			"name": "tech-ref",
+			"source": {
+				"source": "local",
+				"path": "./"
+			}
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"name": "tech-ref",
+	"version": "0.1.0",
+	"description": "tech steps for humans",
+	"hooks": "./harness-adapters/codex/hooks.json",
+	"interface": {
+		"displayName": "tech-ref",
+		"shortDescription": "tech steps for humans"
+	}
+}

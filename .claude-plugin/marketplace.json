@@ -1,0 +1,15 @@
+{
+	"name": "tech-ref",
+	"description": "tech steps for humans",
+	"owner": {
+		"name": "Justin Kek",
+		"email": "justinkekjq@gmail.com"
+	},
+	"plugins": [
+		{
+			"name": "tech-ref",
+			"source": "./",
+			"description": "tech steps for humans"
+		}
+	]
+}

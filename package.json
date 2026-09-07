@@ -1,0 +1,11 @@
+{
+	"name": "tech-ref",
+	"version": "0.1.0",
+	"description": "tech steps for humans",
+	"license": "MIT",
+	"pi": {
+		"extensions": [
+			"./harness-adapters/pi/src/index.ts"
+		]
+	}
+}
