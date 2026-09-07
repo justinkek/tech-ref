@@ -41,7 +41,7 @@ The flow carries the call immediately before the shaded run and the one immediat
 
 Each arrow's label is the middle of a sentence - the sender, the label, then the receiver - so `sends the drafted steps to` between `the session writing the steps` and `guard-summary-verbs.sh` reads as one line. A call a participant makes to itself has no receiver to append, so its label is the whole predicate.
 
-A lane is named for what it is - a file by its name, anything else by a plain noun phrase, as in `the page the steps go on`. One flow per thing the work does, matching the trees. Every tree sits in one `diff` block, and each thing's flow in its own `mermaid` block below it, in the order the trees are in.
+A lane is named for what it is - a file by its name, anything else by a plain noun phrase, as in `the session writing the steps`. Lanes run left to right in call depth: the trigger on the left - the user when the change has one - then each lane the calls descend into, ending at the lowest level the change reaches. One flow per thing the work does, matching the trees. Every tree sits in one `diff` block, and each thing's flow in its own `mermaid` block below it, in the order the trees are in.
 
 ```mermaid
 sequenceDiagram
@@ -49,13 +49,14 @@ sequenceDiagram
     autonumber
     participant Session as the session writing the steps
     participant Guard as guard-summary-verbs.sh
-    participant Page as the page the steps go on
-    Session->>Guard: sends the drafted steps to
+    participant Rules as tech-steps.md
+    Session->>Guard: sends the steps it is about to write to
     rect rgb(220, 245, 220)
-    Guard->>Guard: reads the summary of every step
+    Guard->>Rules: reads the five allowed verbs from
+    Guard->>Guard: checks the summary of every step
     Guard-->>Session: returns a refusal naming each summary outside the five verbs to
     end
-    Session->>Page: writes the accepted steps to
+    Session->>Guard: sends the corrected steps to
 ```
 
 ### The verb a summary opens on
@@ -65,7 +66,7 @@ Every step, change and `In <path>` summary opens on one of five verbs: `add`, `r
 1. **Name the thing.** "name what holds the key" names nothing - say which declaration in which file.
 2. **No `so ...` clause.** The summary says what the change does, never why it was wanted.
 
-`guard-tech-steps.sh` refuses a write that breaks either of these, or any rule above about how the tree and the flow are built. Whether a summary names the thing, whether an arrow label reads as a sentence and whether the right calls are drawn are not machine-checkable and stay rules here.
+`guard-tech-steps.sh` refuses a write that breaks either of these, or any rule above about how the tree and the flow are built. Whether a summary names the thing, whether an arrow label reads as a sentence, whether the lanes run in call depth and whether the right calls are drawn are not machine-checkable and stay rules here.
 
 ### The steps
 
