@@ -1,12 +1,12 @@
 <h1 align="center">tech-ref</h1>
 
-<p align="center">How a piece of work is built, written down before it is.</p>
+<p align="center">tech steps for humans</p>
 
 ## 1. What it is
 
 `rules/tech-steps.md` states one format for implementation steps: a file tree of everything the work touches, a sequence flow of the calls it changes, then nested toggles carrying each change and the code that makes it. It goes to `.tech-steps/<name>.md`, one file per piece of work.
 
-`hooks/guard-tech-steps.sh` holds a write to that format. It reads the text a session is about to write - a file edit or a page update - and denies the write when a tree, a flow or a summary breaks a rule the file states, naming each line it refused.
+`hooks/guard-tech-steps.sh` holds a write to that format. It reads the text a session is about to write and denies the write when a tree, a flow or a summary breaks a rule the file states, naming each line it refused.
 
 ## 2. How it works
 

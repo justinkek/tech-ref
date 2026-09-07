@@ -29,7 +29,7 @@ TREE_RAGGED="$HEADING_120
 + ├── AGENTS.md                                  add the same section one column further out"
 
 through_page="$(jq --null-input --arg content "$TREE_RAGGED" \
-  '{tool_name:"mcp__plugin_Notion_notion__notion-update-page",tool_input:{command:"insert_content",content:$content}}' |
+  '{tool_input:{command:"insert_content",content:$content}}' |
   refusal_for)"
 
 through_edit="$(jq --null-input --arg written "$TREE_RAGGED" \

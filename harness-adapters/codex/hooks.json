@@ -9,15 +9,6 @@
 						"command": "${PLUGIN_ROOT}/hooks/guard-tech-steps.sh"
 					}
 				]
-			},
-			{
-				"matcher": "mcp__plugin_Notion_notion__notion-update-page",
-				"hooks": [
-					{
-						"type": "command",
-						"command": "${PLUGIN_ROOT}/hooks/guard-tech-steps.sh"
-					}
-				]
 			}
 		]
 	}

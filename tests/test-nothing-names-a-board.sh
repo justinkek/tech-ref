@@ -6,7 +6,7 @@ SELF="tests/$(basename "$0")"
 pass=0
 fail=0
 
-WORDS='ticket|epic|sprint|cockpit|board'
+WORDS='ticket|epic|sprint|cockpit|board|notion'
 ABBREVIATIONS='BR|TR|CR'
 
 report() {
